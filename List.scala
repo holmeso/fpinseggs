@@ -60,6 +60,19 @@ object List {
   }
    def sumFL(ints: List[Int]) : Int = foldLeft(ints, 0)(_ + _)
    def productFL(ds: List[Double]) : Double = foldLeft(ds, 1.0)(_ * _)
+   
+   def reverse[A](l: List[A]): List[A] = {
+    foldLeft(l, List[A]())((x,y) => Cons(y,x))
+  }
+  
+  def append[A](a1: List[A], a2: List[A]) : List[A] = {
+    foldRight(a1, a2)( Cons(_,_))
+  }
+  
+  def concat[A](l: List[List[A]]) : List[A] = l match {
+    case Nil => Nil
+    case Cons(x, xs) => 
+  }
 }
 
 
