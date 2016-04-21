@@ -48,6 +48,26 @@ object TestList {
     
     println ("foldLeft")
     println (List.foldLeft(List(1,2,3), 0)((x,y) => x + y))
+    println ("reverse")
+    println (List.reverse(List(1,2,3)))
+    println ("append")
+    println (List.concat(List(List(1,2,3), List(4,5,6))))
+    println ("add1")
+    println (List.add1(List(1,2,3)))
+    println ("toStringList")
+    println (List.toStringList(List(1.0,2.1,3.2)))
+    
+    println ("filter")
+    println (List.filter(List(1,2,3)) ((a:Int) => a % 2 != 0))
+    println ("zip width")
+    println (List.zipWidth(List(1,2,3), List(2,3,4)) (_ + _))
+    println (List.zipWidth(List(1,2,3), List(2,3,4)) (_ - _))
+    println (List.zipWidth(List(1,2,3), List(2,3,4)) (_ / _))
+    println (List.zipWidth(List(1,2,3), List(2,3,4)) (_ * _))
+    
+     println("size")
+     println(Tree.size(Leaf(1)))
+     println("size - done")
   }
 
 }
